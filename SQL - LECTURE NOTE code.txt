@@ -1,0 +1,61 @@
+CREATE TABLE Syntax
+
+CREATE TABLE TableName (
+colName dataType ( ) [NOT NULL],
+PRIMARY KEY (listOfColumns),
+FOREIGN KEY (listOfFKColumns)
+REFERENCES ParentTableName (listOfCKColumns)
+);
+
+
+CREATE TABLE Branch
+
+CREATE TABLE Branch (
+branchNo CHAR (5) NOT NULL,
+street VARCHAR (25),
+city VARCHAR (15),
+postcode VARCHAR (10));
+
+
+CREATE TABLE Staff
+
+CREATE TABLE Staff (
+staffNo CHAR(5) NOT NULL,
+fName VARCHAR(20) NOT NULL,
+lName VARCHAR(25) NOT NULL,
+position VARCHAR(10) NOT NULL,
+gender CHAR(1) NOT NULL,
+DOB DATE,
+salary FLOAT(8,2) NOT NULL,
+branchNo CHAR(5) NOT NULL );
+
+
+CREATE TABLE with a Simple Primary Key
+
+CREATE TABLE Staff (
+staffNo CHAR(5) NOT NULL,
+fName VARCHAR(20) NOT NULL,
+lName VARCHAR(25) NOT NULL,
+position VARCHAR(10) NOT NULL,
+gender CHAR(1) NOT NULL,
+DOB DATE,
+salary FLOAT(8,2) NOT NULL,
+branchNo CHAR(5) NOT NULL,
+PRIMARY KEY (staffNo));
+
+
+CREATE TABLE with a Compound Key
+
+CREATE TABLE Viewing (
+clientNo CHAR (4) NOT NULL,
+propertyNo CHAR (4) NOT NULL,
+viewDate DATE NOT NULL,
+comment VARCHAR (30),
+PRIMARY KEY (clientNo, propertyNo, viewDate));
+
+
+
+
+
+
+
